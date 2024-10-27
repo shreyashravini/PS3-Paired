@@ -1,6 +1,6 @@
 ---
 title: "30538 Problem Set 3: git pair"
-author: "Shreya Shravini"
+author: "Nidhi Srivastava and Shreya Shravini"
 format: 
   pdf:
     keep-tex: true
@@ -29,7 +29,7 @@ data = pd.DataFrame(np.random.rand(100), columns=['Random Numbers'])
 def preview_data(df):
     # First item: the head of the DataFrame
     head_data = df.head()
-    
+    describe = df.describe()
     # Second item: Altair histogram plot
     histogram = alt.Chart(df).mark_bar().encode(
         x=alt.X('Random Numbers', bin=alt.Bin(maxbins=20)),  # Bin the data for histogram
@@ -38,16 +38,15 @@ def preview_data(df):
         width=300,
         height=200,
         title='Histogram of Random Numbers'
-    )
 
-    return [head_data, histogram]
+    return [head_data,describe, histogram]
 
 # Call the function and store the result
 output = preview_data(data)
 
 # Print the head
 print(output[0])
-
+print(output[1])
 # Display the Altair plot
 output[1].show()
 ```
