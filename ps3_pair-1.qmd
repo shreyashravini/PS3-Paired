@@ -1,6 +1,6 @@
 ---
 title: "30538 Problem Set 3: git pair"
-author: "Shreya Shravini"
+author: "Nidhi Srivastava and Shreya Shravini"
 format: 
   pdf:
     keep-tex: true
